@@ -1,0 +1,119 @@
+
+<!doctype html>
+<html>
+
+<head>
+	<title>Plant Identification</title>
+
+</head>
+<style>
+body
+{
+margin:0;
+padding:0;
+background-color:white;
+background-size:cover;
+font-family:sans-serif;
+}
+
+.loginbox
+{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+width:500px;
+height:530px;
+padding:80px 40px;
+box-sizing:border-box;
+background:rgba(0,0,0,0.5);
+}
+
+h3
+{
+margin:0;
+padding:0 0 2px;
+color:#1E90FF;
+text-align:center;
+}
+
+.loginbox p,
+{
+padding:0;
+margin:0;
+font-weight:bold;
+color:#fff;
+}
+
+.loginbox input
+{
+width:100%;
+margin-bottom:20px;
+}
+
+.loginbox input[type="text"], .loginbox input[type="password"]
+{
+border:none;
+border-bottom:1px solid #fff;
+background:transparent;
+outline:none;
+height:40px;
+color:#fff;
+font-size:16px;
+}
+loginbox input[type="submit"]
+{
+border:none;
+outline:none;
+height:40px;
+color:#fff;
+font-size:16px;
+background:rgb(255,38,126);
+cursor:pointer;
+border-radius:20px;
+}
+loginbox input[type="submit"] :hover{
+color:#262626;
+
+background:#efed40;
+}
+h4{
+text-align:center;
+color:red;
+}
+
+</style>
+<body>
+<br>
+<div class="Heading">
+	<h3>Welcome to our Plant identification App!!</h3>
+</div>
+	<div class="loginbox">
+	<h3>Register Here</h3>
+
+<form action="firstpage" method="post">
+{% csrf_token %}
+	<p>Email</p>
+	<input type="text" id="email"  name="email" placeholder="Enter Email">
+	<p>Username</p>
+	<input type="text" name="username" size="15" placeholder="Enter username">
+	<p>Password</p>
+	<input type="password" id="pass" name="pass" placeholder="Enter Password">
+	<input type="submit" name="" value="Submit">
+    <h3>--------------------------------------------</h3>
+	<a href="{{link}}">Already have an account??</a>
+
+</form>
+	</div>
+		<div class="error" >
+	<br><br><br>
+			{% for message in messages %}
+			<h4>{{message}}</h4>
+			{%endfor%}
+		</div>
+
+</body>
+
+
+
+</html>

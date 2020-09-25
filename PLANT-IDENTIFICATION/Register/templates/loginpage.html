@@ -1,0 +1,112 @@
+
+
+<!doctype html>
+<html>
+
+<head>
+	<title>LOGIN FORM</title>
+</head>
+<style>
+body
+{
+margin:0;
+padding:0;
+background-color:white;
+background-size:cover;
+font-family:sans-serif;
+
+}
+.loginbox
+{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+width:500px;
+height:420px;
+padding:80px 40px;
+box-sizing:border-box;
+background:rgba(0,0,0,0.5);
+}
+
+h2
+{
+margin:0;
+padding:0 0 20px;
+color:#1E90FF;
+text-align:center;
+}
+
+.loginbox p
+{
+padding:0;
+margin:0;
+font-weight:bold;
+color:#fff;
+}
+
+.loginbox input
+{
+width:100%;
+margin-bottom:20px;
+}
+
+.loginbox input[type="text"], .loginbox input[type="password"]
+{
+border:none;
+border-bottom:1px solid #fff;
+background:transparent;
+outline:none;
+height:40px;
+color:#fff;
+font-size:16px;
+}
+loginbox input[type="submit"]
+{
+border:none;
+
+outline:none;
+height:40px;
+color:#fff;
+font-size:16px;
+background:rgb(255,38,126);
+cursor:pointer;
+border-radius:20px;
+}
+loginbox input[type="submit"] :hover{
+color:#262626;
+
+background:#efed40;
+}
+
+
+.error{
+color:red;
+}
+</style>
+
+<body>
+	<div class="loginbox">
+	<h2>Log in Here</h2>
+
+<form action="loginfirstpage" method="post">
+{% csrf_token %}
+	<p>Username</p>
+	<input type="text" name="username" size="15" placeholder="Enter username">
+	<p>Password</p>
+	<input type="password" id="pass" name="pass" placeholder="Enter Password">
+	<input type="submit" name="" value="Sign In">
+<div class="error">
+	<br>
+	<br>
+			{% for message in messages %}
+			<h3>{{message}}</h3>
+			{%endfor%}
+		</div>
+</form>
+
+</div>
+
+</body>
+
+</html>
