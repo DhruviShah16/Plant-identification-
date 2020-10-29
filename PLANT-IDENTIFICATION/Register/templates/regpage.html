@@ -1,42 +1,51 @@
+{% extends 'template.html' %}
+{% load static %}
+{% block body%}
 
-<!doctype html>
-<html>
-
-<head>
+{% block head %}
 	<title>Plant Identification</title>
-
-</head>
+{%endblock %}
 <style>
 body
 {
 margin:0;
 padding:0;
-background-color:white;
+background:url("{% static 'images/leaf4.jpg' %} ");
 background-size:cover;
 font-family:sans-serif;
 }
-
 .loginbox
 {
 position:absolute;
-top:50%;
+top:60%;
 left:50%;
 transform:translate(-50%,-50%);
-width:500px;
-height:530px;
+width:550px;
+height:600px;
 padding:80px 40px;
 box-sizing:border-box;
 background:rgba(0,0,0,0.5);
+color:white;
 }
 
 h3
 {
 margin:0;
 padding:0 0 2px;
-color:#1E90FF;
+color:#05f714;
+text-align:center;
+}
+h1
+{
+margin:0;
+padding:0 0 2px;
+color:white;
 text-align:center;
 }
 
+.loginbox{
+	margin-top: 50px;
+}
 .loginbox p,
 {
 padding:0;
@@ -83,12 +92,14 @@ color:red;
 }
 
 </style>
-<body>
+<body background ="{% static 'images/leaf4.jpg'%}">
 <br>
 <div class="Heading">
-	<h3>Welcome to our Plant identification App!!</h3>
+	<h1>Welcome to our Plant identification App!!</h1>
+	<br><br><wbr>
 </div>
 	<div class="loginbox">
+
 	<h3>Register Here</h3>
 
 <form action="firstpage" method="post">
@@ -100,8 +111,8 @@ color:red;
 	<p>Password</p>
 	<input type="password" id="pass" name="pass" placeholder="Enter Password">
 	<input type="submit" name="" value="Submit">
-    <h3>--------------------------------------------</h3>
-	<a href="{{link}}">Already have an account??</a>
+	<br><br>
+    <a href="{{link}}">Already have an account??</a>
 
 </form>
 	</div>
@@ -111,9 +122,4 @@ color:red;
 			<h4>{{message}}</h4>
 			{%endfor%}
 		</div>
-
-</body>
-
-
-
-</html>
+{% endblock %}

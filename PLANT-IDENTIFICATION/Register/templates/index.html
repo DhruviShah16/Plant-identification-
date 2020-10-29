@@ -1,0 +1,39 @@
+{% extends 'template.html' %}
+{%block head%}
+<script src="{{STATIC_URL}}/static/p5.js"></script>
+  <script src="{{STATIC_URL}}/static/p5.dom.min.js"></script>
+  <script src="{{STATIC_URL}}/static/p5.sound.min.js"></script>
+	<script>
+	label = "waiting"
+	description = ""
+</script>
+
+  <script src="{{STATIC_URL}}/static/ml5.min.js"></script>
+      <script src="{{STATIC_URL}}/static/sketch.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="{{STATIC_URL}}/static/style.css">
+  <meta charset="utf-8">
+
+{% endblock%}
+{% block body %}
+<div class="card text-white bg-success mt-3 ml-3" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title" id = "output">Card title</h5>
+    <p class="card-text" id = "description">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+</div>
+<!--  <p id = "output" class = "output"></p>-->
+<div id = "myscreen">
+
+<!--<p id = "description" class = "output"> </p>-->
+<style>
+	#stop_text{
+	color: white;
+	}
+</style>
+<div class="custom-control custom-switch">
+  <input type="checkbox" class="custom-control-input" id="stop" checked>
+  <label class="custom-control-label" for="stop">Start/Stop</label>
+</div>
+</div>
+{% endblock %}
