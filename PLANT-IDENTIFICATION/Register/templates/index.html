@@ -1,17 +1,18 @@
 {% extends 'template.html' %}
 {%block head%}
-<script src="{{STATIC_URL}}/static/p5.js"></script>
-  <script src="{{STATIC_URL}}/static/p5.dom.min.js"></script>
-  <script src="{{STATIC_URL}}/static/p5.sound.min.js"></script>
+{%load static%}
+<script src="{% static 'p5.js'%}"></script>
+  <script src="{%static 'p5.dom.min.js'%}"></script>
+  <script src="{% static 'p5.sound.min.js'%}"></script>
 	<script>
 	label = "waiting"
 	description = ""
 </script>
 
-  <script src="{{STATIC_URL}}/static/ml5.min.js"></script>
-      <script src="{{STATIC_URL}}/static/sketch.js"></script>
+  <script src="{%static 'ml5.min.js'%}"></script>
+      <script src="{% static 'sketch.js'%}"></script>
 
-  <link rel="stylesheet" type="text/css" href="{{STATIC_URL}}/static/style.css">
+  <link rel="stylesheet" type="text/css" href="{%static 'style.css'%}">
   <meta charset="utf-8">
 
 {% endblock%}
@@ -36,4 +37,9 @@
   <label class="custom-control-label" for="stop">Start/Stop</label>
 </div>
 </div>
+<script>
+ var1 = document.getElementById("defaultCanvas0")
+ console.log(var1);
+ // document.getElementById("myscreen").appendChild( );
+</script>
 {% endblock %}

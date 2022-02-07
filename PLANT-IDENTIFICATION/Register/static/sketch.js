@@ -37,8 +37,24 @@ function draw() {
 
   // Draw the video
   image(video, 0,0,width, height);
+//     for(let i=0;i<400;i++){
+//      for(let j = 0; j < 400; ++j){
+//        var c=video.get(i,j);
+////      noStroke();
+////      fill(c,25);
+//        var h = hue(c);
+//        var s = saturation(c);
+//        var b = brightness(c);
+//
+//        if(h >= 75 && h <= 130){
+//            stroke(c[0],c[1],c[2])
+//            point(i,j)
+//        }
+//       }
+//    }
 
-	
+
+
 	var ele = document.getElementById("output");
 	var ele2 = document.getElementById("description");
 

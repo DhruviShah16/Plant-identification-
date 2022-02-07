@@ -12,7 +12,7 @@ from django.http import HttpResponse
 
 # Create your views here.
 def signup(request):
-    return render(request,'regpage.html',{'link':'http://127.0.0.1:8000/login'})
+    return render(request,'regpage.html')
 def login(request):
     return  render(request,'loginpage.html')
 
